@@ -74,9 +74,10 @@
 		{
 			$name = $filesop[0];
 			$email = $filesop[1];
-			
-			$sql = mysql_query("INSERT INTO csv (name, email) VALUES ('$name','$email')");
-			$c = $c + 1;
+			if($c!=0) {
+				$sql = mysql_query("INSERT INTO csv (name, email) VALUES ('$name','$email')");
+			}
+				$c = $c + 1;
 		}
 		
 			if($sql){
